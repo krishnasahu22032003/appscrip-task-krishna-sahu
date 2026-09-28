@@ -417,11 +417,11 @@ a {
 
 .discover-section {
   width: 100%;
-  min-height: 470px;
+  height: 245px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 104px;
+  padding-top: 45px;
 }
 
 .discover-content {
@@ -738,8 +738,8 @@ a {
 
 @media (max-width: 1200px) {
   .discover-section {
-    min-height: 430px;
-    padding-top: 85px;
+    height: 270px;
+    padding-top: 55px;
   }
 
   .product-toolbar,
@@ -762,8 +762,8 @@ a {
 
 @media (max-width: 900px) {
   .discover-section {
-    min-height: 390px;
-    padding-top: 65px;
+    height: 250px;
+    padding-top: 50px;
   }
 
   .discover-content h1 {
@@ -803,7 +803,8 @@ a {
 
 @media (max-width: 767px) {
   .discover-section {
-    min-height: auto;
+    height: auto;
+    min-height: 112px;
     padding: 28px 20px 20px;
   }
 

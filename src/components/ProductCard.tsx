@@ -13,18 +13,25 @@ export default function ProductCard({
     <article className="product-card">
       <div className="product-image-wrapper">
         {index === 0 && (
-          <span className="new-product-label">NEW PRODUCT</span>
+          <span className="new-product-label">
+            NEW PRODUCT
+          </span>
         )}
 
         {index === 1 && (
-          <span className="out-of-stock-label">OUT OF STOCK</span>
+          <span className="out-of-stock-label">
+            OUT OF STOCK
+          </span>
         )}
 
-        <img
-          src={product.image}
-          alt={product.title}
-          className="product-image"
-        />
+        {product.image && (
+          <img
+            src={product.image}
+            alt={product.title}
+            className="product-image"
+            loading={index < 6 ? "eager" : "lazy"}
+          />
+        )}
       </div>
 
       <div className="product-information">
