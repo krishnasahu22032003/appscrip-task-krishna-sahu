@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import ProductSidebar from "@/components/ProductSidebar";
 import ProductGrid from "@/components/ProductGrid";
 import { getProducts } from "@/lib/api";
+import Footer from "@/components/Footer";
 
 export default async function Home() {
   
@@ -85,6 +86,7 @@ export default async function Home() {
           <ProductGrid products={products} />
         </section>
       </main>
+      <Footer/>
     </>
   );
 }
