@@ -15,10 +15,14 @@ const filters = [
 
 export default function ProductSidebar() {
   const [customizable, setCustomizable] = useState(false);
-  const [openFilter, setOpenFilter] = useState<string | null>(null);
+  const [openFilter, setOpenFilter] = useState<string | null>(
+    null
+  );
 
   const toggleFilter = (filter: string) => {
-    setOpenFilter((current) => (current === filter ? null : filter));
+    setOpenFilter((current) =>
+      current === filter ? null : filter
+    );
   };
 
   return (
@@ -27,12 +31,16 @@ export default function ProductSidebar() {
         <input
           type="checkbox"
           checked={customizable}
-          onChange={(event) => setCustomizable(event.target.checked)}
+          onChange={(event) =>
+            setCustomizable(event.target.checked)
+          }
         />
 
         <span className="custom-checkbox" />
 
-        <span className="customizable-label">CUSTOMIZBLE</span>
+        <span className="customizable-label">
+          CUSTOMIZBLE
+        </span>
       </label>
 
       <div className="sidebar-filters">
@@ -40,7 +48,10 @@ export default function ProductSidebar() {
           const isOpen = openFilter === filter;
 
           return (
-            <div className="filter-group" key={filter}>
+            <div
+              className="filter-group"
+              key={filter}
+            >
               <button
                 type="button"
                 className="filter-header"
@@ -50,7 +61,11 @@ export default function ProductSidebar() {
                 <span>{filter}</span>
 
                 <svg
-                  className={isOpen ? "filter-arrow-open" : ""}
+                  className={
+                    isOpen
+                      ? "filter-arrow-open"
+                      : ""
+                  }
                   viewBox="0 0 12 8"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +81,9 @@ export default function ProductSidebar() {
                 </svg>
               </button>
 
-              <div className="filter-value">All</div>
+              <div className="filter-value">
+                All
+              </div>
 
               {isOpen && (
                 <div className="filter-options">

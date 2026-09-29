@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Product } from "@/types/product";
 
 interface ProductCardProps {
@@ -9,6 +12,12 @@ export default function ProductCard({
   product,
   index,
 }: ProductCardProps) {
+  const [isWishlisted, setIsWishlisted] = useState(false);
+
+  const toggleWishlist = () => {
+    setIsWishlisted((current) => !current);
+  };
+
   return (
     <article className="product-card">
       <div className="product-image-wrapper">
@@ -49,13 +58,21 @@ export default function ProductCard({
           <button
             type="button"
             className={`product-wishlist ${
-              index === 2 ? "product-wishlist-active" : ""
+              isWishlisted
+                ? "product-wishlist-active"
+                : ""
             }`}
-            aria-label={`Add ${product.title} to wishlist`}
+            onClick={toggleWishlist}
+            aria-label={
+              isWishlisted
+                ? `Remove ${product.title} from wishlist`
+                : `Add ${product.title} to wishlist`
+            }
+            aria-pressed={isWishlisted}
           >
             <svg
               viewBox="0 0 24 24"
-              fill="none"
+              fill={isWishlisted ? "currentColor" : "none"}
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
