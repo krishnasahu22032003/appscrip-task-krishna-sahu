@@ -2,7 +2,9 @@
 
 A responsive product listing page (PLP) built for the Appscrip frontend assignment using Next.js, TypeScript, and plain CSS. Products are fetched on the server using Server-Side Rendering (SSR) from a mock product API.
 
-**Live Demo:** <your-netlify-url>
+**Live Demo:** [https://appscrip-task-krishna-sahu.vercel.app](https://appscrip-task-krishna-sahu.vercel.app/)
+
+**Repository:** [github.com/krishnasahu22032003/Appscrip-task-Krishna-Sahu](https://github.com/krishnasahu22032003/Appscrip-task-Krishna-Sahu)
 
 ---
 
@@ -30,7 +32,7 @@ A responsive product listing page (PLP) built for the Appscrip frontend assignme
 - TypeScript
 - Plain CSS (no CSS framework)
 - Server-Side Rendering (SSR)
-- Mock product API ([Fake Store API]("https://dummyjson.com/products/"))
+- Mock product API ([DummyJSON](https://dummyjson.com/products))
 
 ---
 
@@ -60,8 +62,8 @@ A responsive product listing page (PLP) built for the Appscrip frontend assignme
 ### Installation
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/krishnasahu22032003/Appscrip-task-Krishna-Sahu.git
+cd Appscrip-task-Krishna-Sahu
 npm install
 npm run dev
 ```
@@ -159,7 +161,7 @@ Only the interactive parts (filters, sorting, wishlist, footer accordion, newsle
 
 ## API
 
-Product data comes from the Fake Store API:
+Product data comes from the DummyJSON API:
 
 ```
 https://dummyjson.com/products
@@ -171,10 +173,14 @@ The fetching logic lives in `lib/api.ts`, and the product type is defined in `ty
 
 ## Deployment
 
-The project is deployed on Netlify.
+The project is deployed on Vercel:
+
+[https://appscrip-task-krishna-sahu.vercel.app](https://appscrip-task-krishna-sahu.vercel.app/)
+
+To deploy your own copy:
 
 1. Push the repository to GitHub.
-2. Import the repository in Netlify.
+2. Import the repository in Vercel.
 3. Use the default Next.js build settings.
 4. Deploy.
 
@@ -188,4 +194,7 @@ Implemented according to the provided Appscrip Product Listing Page design, with
 
 ## Author
 
-**<Krishna sahu>**
+**Krishna Sahu**
+
+- Email: [krishna.sahu.work@gmail.com](mailto:krishna.sahu.work@gmail.com)
+- GitHub: [github.com/krishnasahu22032003](https://github.com/krishnasahu22032003)
